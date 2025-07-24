@@ -4,14 +4,74 @@ import styles from "./page.module.css";
 export default function DashboardPage() {
   return (
     <div className={styles.container}>
-      <main className={styles.main}>
-        {/* Header Section */}
-        <div className={styles.header}>
-          <div className={styles.welcomeSection}>
-            <h1 className={styles.welcomeTitle}>Welcome back, John!</h1>
-            <p className={styles.welcomeSubtitle}>Here's your account overview</p>
+      {/* Sidebar Navigation */}
+      <aside className={styles.sidebar}>
+        <div className={styles.sidebarHeader}>
+          <div className={styles.userProfile}>
+            <div className={styles.avatar}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <div className={styles.userInfo}>
+              <h3 className={styles.userName}>John Doe</h3>
+              <p className={styles.userRole}>Premium Customer</p>
+            </div>
           </div>
-          <div className={styles.accountActions}>
+        </div>
+
+        <nav className={styles.sidebarNav}>
+          <a href="/dashboard" className={styles.navItem}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9,22 9,12 15,12 15,22"/>
+            </svg>
+            <span>Dashboard</span>
+          </a>
+          <a href="/billing" className={styles.navItem}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+            </svg>
+            <span>Billing</span>
+          </a>
+          <a href="/usage" className={styles.navItem}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M18 20V10M12 20V4M6 20v-6"/>
+            </svg>
+            <span>Usage</span>
+          </a>
+          <a href="/support" className={styles.navItem}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span>Support</span>
+          </a>
+          <a href="/settings" className={styles.navItem}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+            <span>Settings</span>
+          </a>
+          <a href="/pay-bill" className={styles.payBillButton}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+            </svg>
+            <span>Pay My Bill</span>
+          </a>
+        </nav>
+      </aside>
+
+      {/* Main Content */}
+      <main className={styles.mainContent}>
+        {/* Top Bar */}
+        <div className={styles.topBar}>
+          <div className={styles.breadcrumb}>
+            <h1 className={styles.pageTitle}>My Dashboard</h1>
+            <p className={styles.pageSubtitle}>Welcome back, John!</p>
+          </div>
+          <div className={styles.topBarActions}>
             <button className={styles.actionButton}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
@@ -27,7 +87,7 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        {/* Quick Stats */}
+        {/* Stats Cards */}
         <div className={styles.statsGrid}>
           <div className={styles.statCard}>
             <div className={styles.statIcon}>
@@ -79,7 +139,7 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        {/* Main Content Grid */}
+        {/* Main Dashboard Grid */}
         <div className={styles.dashboardGrid}>
           {/* Current Plan */}
           <div className={styles.dashboardCard}>

@@ -57,6 +57,16 @@ export default function PayBillPage() {
                   <span>$111.43</span>
                 </div>
               </div>
+
+              {/* Pay Now Button */}
+              <div className={styles.payNowSection}>
+                <button type="submit" className={styles.payNowButton}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+                  </svg>
+                  Pay $111.43
+                </button>
+              </div>
             </div>
           </div>
 
@@ -258,12 +268,7 @@ export default function PayBillPage() {
                     </label>
                   </div>
                   
-                  <button type="submit" className={styles.submitButton}>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
-                    </svg>
-                    Pay $111.43
-                  </button>
+                  
                 </div>
               </form>
             </div>

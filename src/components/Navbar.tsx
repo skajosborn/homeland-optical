@@ -1,12 +1,32 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
 import ThemeToggle from './ThemeToggle';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    // Check initial theme
+    const checkTheme = () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      setIsDarkMode(isDark);
+    };
+
+    checkTheme();
+
+    // Listen for theme changes
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme']
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -17,7 +37,7 @@ const Navbar: React.FC = () => {
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
           <img
-            src="/newlogocombo.svg"
+            src={isDarkMode ? "/newlogocombo.svg" : "/hotnewdark.svg"}
             alt="Homeland Cable Logo"
             className={styles.logoImage}
             style={{ height: "2em", marginRight: "0.5em", verticalAlign: "middle" }}

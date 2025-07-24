@@ -133,12 +133,50 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-  margin-top: 1rem;
   border-top: 2px solid var(--border);
-  font-size: 1.125rem;
+  margin-top: 1rem;
   font-weight: 600;
+  font-size: 1.125rem;
   color: var(--foreground);
   transition: color 0.3s ease;
+}
+
+/* Pay Now Button */
+.payNowSection {
+  margin-top: 2rem;
+}
+
+.payNowButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: #10b981;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.payNowButton:hover {
+  background: #059669;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.payNowButton:active {
+  transform: translateY(0);
+}
+
+.payNowButton svg {
+  width: 20px;
+  height: 20px;
 }
 
 /* Payment Section */

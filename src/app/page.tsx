@@ -16,7 +16,7 @@ export default function Home() {
           </div>
           <div className={styles.heroImage}>
             <Image
-              src="/manhero.png"
+              src="/wifi.png"
               alt="Homeland Cable Hero"
               width={600}
               height={400}
