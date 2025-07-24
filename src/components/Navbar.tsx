@@ -38,6 +38,9 @@ const Navbar: React.FC = () => {
           <Link href="/support" className={styles.navLink}>
             Support
           </Link>
+          <Link href="/dashboard" className={styles.navLink}>
+            Dashboard
+          </Link>
           <Link href="/login" className={styles.navLink}>
             Login
           </Link>
@@ -71,6 +74,9 @@ const Navbar: React.FC = () => {
           </Link>
           <Link href="/support" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>
             Support
+          </Link>
+          <Link href="/dashboard" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>
+            Dashboard
           </Link>
           <Link href="/login" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>
             Login
