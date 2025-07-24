@@ -37,6 +37,9 @@ const Navbar: React.FC = () => {
           <Link href="/support" className={styles.navLink}>
             Support
           </Link>
+          <Link href="/support" className={styles.navLink}>
+            Sign Up
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}

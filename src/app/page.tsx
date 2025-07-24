@@ -1,9 +1,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import ThemeToggle from "../components/ThemeToggle";
 
 export default function Home() {
   return (
     <div className={styles.container}>
+      <ThemeToggle />
       <main className={styles.main}>
         <div className={styles.hero}>
           <div className={styles.heroContent}>
@@ -16,7 +18,7 @@ export default function Home() {
           </div>
           <div className={styles.heroImage}>
             <Image
-              src="/newhero.svg"
+              src="/manhero.png"
               alt="Homeland Cable Hero"
               width={600}
               height={400}
@@ -28,14 +30,22 @@ export default function Home() {
 
         <div className={styles.features}>
           <div className={styles.feature}>
-            <div className={styles.featureIcon}>🚀</div>
+          <div className={styles.featureIcon}>
+              <Image
+                src="/internet.svg"
+                alt="Television Icon"
+                width={48}
+                height={48}
+                className={styles.image}
+              />
+            </div>
             <h3>High-Speed Internet</h3>
             <p>Up to 1Gbps speeds for streaming, gaming, and work</p>
           </div>
           <div className={styles.feature}>
             <div className={styles.featureIcon}>
               <Image
-                src="/television.svg"
+                src="/telephone.svg"
                 alt="Television Icon"
                 width={48}
                 height={48}
@@ -46,7 +56,15 @@ export default function Home() {
             <p>Hundreds of channels with HD and 4K quality</p>
           </div>
           <div className={styles.feature}>
-            <div className={styles.featureIcon}>💰</div>
+          <div className={styles.featureIcon}>
+              <Image
+                src="/television.svg"
+                alt="Television Icon"
+                width={48}
+                height={48}
+                className={styles.image}
+              />
+            </div>
             <h3>Best Bundles</h3>
             <p>Save big with our internet, TV, and phone packages</p>
           </div>

@@ -2,8 +2,9 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: white;
-  color: black;
+  background: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .main {
@@ -12,9 +13,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 0;
   width: 100%;
 }
 
@@ -25,17 +24,23 @@
   align-items: center;
   margin-bottom: 6rem;
   width: 100%;
-  margin-top: 2rem;
+  background: var(--hero-bg);
+  padding: 4rem 2rem;
+  transition: background-color 0.3s ease;
 }
 
 .heroContent {
   text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-left: 2rem;
 }
 
 .heroImage {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-right: 2rem;
 }
 
 .image {
@@ -61,9 +66,10 @@
 .description {
   font-size: 1.25rem;
   line-height: 1.6;
-  color: #666;
+  color: var(--text-muted);
   margin-bottom: 0;
   font-weight: 300;
+  transition: color 0.3s ease;
 }
 
 .features {
@@ -72,6 +78,8 @@
   gap: 3rem;
   margin-bottom: 4rem;
   width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
 }
 
 .feature {
@@ -96,14 +104,16 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  color: black;
+  color: var(--foreground);
+  transition: color 0.3s ease;
 }
 
 .feature p {
-  color: #666;
+  color: var(--text-muted);
   line-height: 1.5;
   font-weight: 300;
   font-size: 0.95rem;
+  transition: color 0.3s ease;
 }
 
 .cta {
@@ -112,6 +122,8 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 2rem;
+  max-width: 1200px;
+  padding: 0 2rem;
 }
 
 .primaryButton {
@@ -135,35 +147,37 @@
 
 .secondaryButton {
   background: transparent;
-  color: black;
+  color: var(--foreground);
   padding: 1rem 2.5rem;
   border-radius: 0;
   font-weight: 400;
   font-size: 0.875rem;
-  border: 1px solid black;
+  border: 1px solid var(--foreground);
   transition: all 0.2s ease;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 .secondaryButton:hover {
-  background: black;
-  color: white;
+  background: var(--foreground);
+  color: var(--background);
   transform: none;
 }
 
 .footer {
   padding: 2rem;
   text-align: center;
-  background: #f8f8f8;
-  border-top: 1px solid #e5e5e5;
+  background: var(--footer-bg);
+  border-top: 1px solid var(--footer-border);
   margin-top: auto;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .footer p {
-  color: #666;
+  color: var(--text-muted);
   font-size: 0.875rem;
   font-weight: 300;
+  transition: color 0.3s ease;
 }
 
 /* Responsive Design */
@@ -172,10 +186,16 @@
     grid-template-columns: 1fr;
     gap: 3rem;
     text-align: center;
+    padding: 3rem 2rem;
   }
 
   .heroContent {
     text-align: center;
+    padding-left: 0;
+  }
+
+  .heroImage {
+    padding-right: 0;
   }
 
   .title {
@@ -189,8 +209,8 @@
 }
 
 @media (max-width: 768px) {
-  .main {
-    padding: 1rem;
+  .hero {
+    padding: 2rem 1rem;
   }
 
   .title {
@@ -204,11 +224,13 @@
   .features {
     grid-template-columns: 1fr;
     gap: 2rem;
+    padding: 0 1rem;
   }
   
   .cta {
     flex-direction: column;
     align-items: center;
+    padding: 0 1rem;
   }
   
   .primaryButton,
@@ -224,16 +246,13 @@
 }
 
 @media (max-width: 480px) {
-  .main {
-    padding: 1rem;
+  .hero {
+    padding: 1.5rem 1rem;
+    margin-bottom: 3rem;
   }
   
   .title {
     font-size: 2rem;
-  }
-  
-  .hero {
-    margin-bottom: 3rem;
   }
   
   .features {
