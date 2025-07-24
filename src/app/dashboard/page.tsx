@@ -151,7 +151,7 @@ export default function DashboardPage() {
                 </div>
                 <div className={styles.billAmount}>
                   <span className={styles.amount}>$89.99</span>
-                  <span className={styles.status}>Unpaid</span>
+                  <span className={`${styles.status} ${styles.unpaid}`}>Unpaid</span>
                 </div>
               </div>
               <div className={styles.billItem}>
@@ -183,12 +183,12 @@ export default function DashboardPage() {
               <h2 className={styles.cardTitle}>Quick Actions</h2>
             </div>
             <div className={styles.quickActions}>
-              <button className={styles.quickAction}>
+              <a href="/pay-bill" className={styles.quickAction}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
                 </svg>
                 Pay Bill
-              </button>
+              </a>
               <button className={styles.quickAction}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function SignupPage() {
@@ -22,44 +23,72 @@ export default function SignupPage() {
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
                   <label htmlFor="firstName" className={styles.label}>First Name</label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    className={styles.input}
-                    required
-                  />
+                  <div className={styles.inputWrapper}>
+                    <svg className={styles.inputIcon} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      className={styles.input}
+                      placeholder="John"
+                      required
+                    />
+                  </div>
                 </div>
                 <div className={styles.formGroup}>
                   <label htmlFor="lastName" className={styles.label}>Last Name</label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    className={styles.input}
-                    required
-                  />
+                  <div className={styles.inputWrapper}>
+                    <svg className={styles.inputIcon} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      className={styles.input}
+                      placeholder="Doe"
+                      required
+                    />
+                  </div>
                 </div>
               </div>
               <div className={styles.formGroup}>
                 <label htmlFor="email" className={styles.label}>Email Address</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className={styles.input}
-                  required
-                />
+                <div className={styles.inputWrapper}>
+                  <svg className={styles.inputIcon} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    className={styles.input}
+                    placeholder="john.doe@example.com"
+                    required
+                  />
+                </div>
               </div>
               <div className={styles.formGroup}>
                 <label htmlFor="phone" className={styles.label}>Phone Number</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  className={styles.input}
-                  required
-                />
+                <div className={styles.inputWrapper}>
+                  <svg className={styles.inputIcon} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    className={styles.input}
+                    placeholder="(555) 123-4567"
+                    required
+                  />
+                </div>
               </div>
             </div>
 
@@ -67,90 +96,117 @@ export default function SignupPage() {
               <h2 className={styles.sectionTitle}>Service Address</h2>
               <div className={styles.formGroup}>
                 <label htmlFor="address" className={styles.label}>Street Address</label>
-                <input
-                  type="text"
-                  id="address"
-                  name="address"
-                  className={styles.input}
-                  required
-                />
+                <div className={styles.inputWrapper}>
+                  <svg className={styles.inputIcon} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    className={styles.input}
+                    placeholder="123 Main Street"
+                    required
+                  />
+                </div>
               </div>
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
                   <label htmlFor="city" className={styles.label}>City</label>
-                  <input
-                    type="text"
-                    id="city"
-                    name="city"
-                    className={styles.input}
-                    required
-                  />
+                  <div className={styles.inputWrapper}>
+                    <svg className={styles.inputIcon} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                      <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <input
+                      type="text"
+                      id="city"
+                      name="city"
+                      className={styles.input}
+                      placeholder="New York"
+                      required
+                    />
+                  </div>
                 </div>
                 <div className={styles.formGroup}>
                   <label htmlFor="state" className={styles.label}>State</label>
-                  <select id="state" name="state" className={styles.select} required>
-                    <option value="">Select State</option>
-                    <option value="AL">Alabama</option>
-                    <option value="AK">Alaska</option>
-                    <option value="AZ">Arizona</option>
-                    <option value="AR">Arkansas</option>
-                    <option value="CA">California</option>
-                    <option value="CO">Colorado</option>
-                    <option value="CT">Connecticut</option>
-                    <option value="DE">Delaware</option>
-                    <option value="FL">Florida</option>
-                    <option value="GA">Georgia</option>
-                    <option value="HI">Hawaii</option>
-                    <option value="ID">Idaho</option>
-                    <option value="IL">Illinois</option>
-                    <option value="IN">Indiana</option>
-                    <option value="IA">Iowa</option>
-                    <option value="KS">Kansas</option>
-                    <option value="KY">Kentucky</option>
-                    <option value="LA">Louisiana</option>
-                    <option value="ME">Maine</option>
-                    <option value="MD">Maryland</option>
-                    <option value="MA">Massachusetts</option>
-                    <option value="MI">Michigan</option>
-                    <option value="MN">Minnesota</option>
-                    <option value="MS">Mississippi</option>
-                    <option value="MO">Missouri</option>
-                    <option value="MT">Montana</option>
-                    <option value="NE">Nebraska</option>
-                    <option value="NV">Nevada</option>
-                    <option value="NH">New Hampshire</option>
-                    <option value="NJ">New Jersey</option>
-                    <option value="NM">New Mexico</option>
-                    <option value="NY">New York</option>
-                    <option value="NC">North Carolina</option>
-                    <option value="ND">North Dakota</option>
-                    <option value="OH">Ohio</option>
-                    <option value="OK">Oklahoma</option>
-                    <option value="OR">Oregon</option>
-                    <option value="PA">Pennsylvania</option>
-                    <option value="RI">Rhode Island</option>
-                    <option value="SC">South Carolina</option>
-                    <option value="SD">South Dakota</option>
-                    <option value="TN">Tennessee</option>
-                    <option value="TX">Texas</option>
-                    <option value="UT">Utah</option>
-                    <option value="VT">Vermont</option>
-                    <option value="VA">Virginia</option>
-                    <option value="WA">Washington</option>
-                    <option value="WV">West Virginia</option>
-                    <option value="WI">Wisconsin</option>
-                    <option value="WY">Wyoming</option>
-                  </select>
+                  <div className={styles.inputWrapper}>
+                    <svg className={styles.inputIcon} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                      <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <select id="state" name="state" className={styles.select} required>
+                      <option value="">Select State</option>
+                      <option value="AL">Alabama</option>
+                      <option value="AK">Alaska</option>
+                      <option value="AZ">Arizona</option>
+                      <option value="AR">Arkansas</option>
+                      <option value="CA">California</option>
+                      <option value="CO">Colorado</option>
+                      <option value="CT">Connecticut</option>
+                      <option value="DE">Delaware</option>
+                      <option value="FL">Florida</option>
+                      <option value="GA">Georgia</option>
+                      <option value="HI">Hawaii</option>
+                      <option value="ID">Idaho</option>
+                      <option value="IL">Illinois</option>
+                      <option value="IN">Indiana</option>
+                      <option value="IA">Iowa</option>
+                      <option value="KS">Kansas</option>
+                      <option value="KY">Kentucky</option>
+                      <option value="LA">Louisiana</option>
+                      <option value="ME">Maine</option>
+                      <option value="MD">Maryland</option>
+                      <option value="MA">Massachusetts</option>
+                      <option value="MI">Michigan</option>
+                      <option value="MN">Minnesota</option>
+                      <option value="MS">Mississippi</option>
+                      <option value="MO">Missouri</option>
+                      <option value="MT">Montana</option>
+                      <option value="NE">Nebraska</option>
+                      <option value="NV">Nevada</option>
+                      <option value="NH">New Hampshire</option>
+                      <option value="NJ">New Jersey</option>
+                      <option value="NM">New Mexico</option>
+                      <option value="NY">New York</option>
+                      <option value="NC">North Carolina</option>
+                      <option value="ND">North Dakota</option>
+                      <option value="OH">Ohio</option>
+                      <option value="OK">Oklahoma</option>
+                      <option value="OR">Oregon</option>
+                      <option value="PA">Pennsylvania</option>
+                      <option value="RI">Rhode Island</option>
+                      <option value="SC">South Carolina</option>
+                      <option value="SD">South Dakota</option>
+                      <option value="TN">Tennessee</option>
+                      <option value="TX">Texas</option>
+                      <option value="UT">Utah</option>
+                      <option value="VT">Vermont</option>
+                      <option value="VA">Virginia</option>
+                      <option value="WA">Washington</option>
+                      <option value="WV">West Virginia</option>
+                      <option value="WI">Wisconsin</option>
+                      <option value="WY">Wyoming</option>
+                    </select>
+                  </div>
                 </div>
                 <div className={styles.formGroup}>
                   <label htmlFor="zipCode" className={styles.label}>ZIP Code</label>
-                  <input
-                    type="text"
-                    id="zipCode"
-                    name="zipCode"
-                    className={styles.input}
-                    required
-                  />
+                  <div className={styles.inputWrapper}>
+                    <svg className={styles.inputIcon} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                      <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <input
+                      type="text"
+                      id="zipCode"
+                      name="zipCode"
+                      className={styles.input}
+                      placeholder="10001"
+                      required
+                    />
+                  </div>
                 </div>
               </div>
             </div>
