@@ -104,6 +104,7 @@
 .featureIcon img {
   filter: var(--icon-filter);
   transition: filter 0.3s ease;
+  opacity: 0.6;
 }
 
 .feature h3 {
@@ -115,7 +116,7 @@
 }
 
 .feature p {
-  color: var(--text-muted);
+  color: #999999;
   line-height: 1.5;
   font-weight: 300;
   font-size: 0.95rem;
