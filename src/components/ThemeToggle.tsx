@@ -3,7 +3,11 @@
 import { useState, useEffect } from 'react';
 import styles from './ThemeToggle.module.css';
 
-export default function ThemeToggle() {
+interface ThemeToggleProps {
+  variant?: 'floating' | 'navbar';
+}
+
+export default function ThemeToggle({ variant = 'floating' }: ThemeToggleProps) {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
@@ -33,10 +37,12 @@ export default function ThemeToggle() {
     }
   };
 
+  const buttonClass = variant === 'navbar' ? styles.navbarToggle : styles.toggle;
+
   return (
     <button 
       onClick={toggleTheme}
-      className={styles.toggle}
+      className={buttonClass}
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
     >
       {isDark ? (

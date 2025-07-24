@@ -31,6 +31,7 @@ body {
   --hero-bg: #f8f8f8;
   --footer-bg: #f8f8f8;
   --footer-border: #e5e5e5;
+  --icon-filter: none;
 }
 
 [data-theme="dark"] {
@@ -46,6 +47,7 @@ body {
   --hero-bg: #1a1a1a;
   --footer-bg: #1a1a1a;
   --footer-border: #333333;
+  --icon-filter: brightness(0) invert(1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -58,6 +60,7 @@ body {
     --hero-bg: #1a1a1a;
     --footer-bg: #1a1a1a;
     --footer-border: #333333;
+    --icon-filter: brightness(0) invert(1);
   }
 }
 

@@ -1,11 +1,9 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import ThemeToggle from "../components/ThemeToggle";
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <ThemeToggle />
       <main className={styles.main}>
         <div className={styles.hero}>
           <div className={styles.heroContent}>

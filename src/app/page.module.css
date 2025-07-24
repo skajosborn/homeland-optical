@@ -59,6 +59,7 @@
 }
 
 .highlight {
+  font-size: 3.6rem;
   color: #dc2626;
   font-weight: 600;
 }
@@ -98,6 +99,11 @@
   font-size: 3rem;
   margin-bottom: 1.5rem;
   display: block;
+}
+
+.featureIcon img {
+  filter: var(--icon-filter);
+  transition: filter 0.3s ease;
 }
 
 .feature h3 {

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +17,7 @@ const Navbar: React.FC = () => {
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
           <img
-            src="/HOT-logo.svg"
+            src="/newlogocombo.svg"
             alt="Homeland Cable Logo"
             className={styles.logoImage}
             style={{ height: "2em", marginRight: "0.5em", verticalAlign: "middle" }}
@@ -40,6 +41,7 @@ const Navbar: React.FC = () => {
           <Link href="/support" className={styles.navLink}>
             Sign Up
           </Link>
+          <ThemeToggle variant="navbar" />
         </div>
 
         {/* Mobile Menu Button */}
@@ -67,6 +69,12 @@ const Navbar: React.FC = () => {
           <Link href="/support" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>
             Support
           </Link>
+          <Link href="/support" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>
+            Sign Up
+          </Link>
+          <div className={styles.mobileThemeToggle}>
+            <ThemeToggle variant="navbar" />
+          </div>
         </div>
       </div>
     </nav>
