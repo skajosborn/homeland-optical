@@ -54,12 +54,12 @@ export default function DashboardPage() {
             </svg>
             <span>Settings</span>
           </a>
-          <a href="/pay-bill" className={styles.payBillButton}>
+          {/* <a href="/pay-bill" className={styles.payBillButton}>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
             </svg>
             <span>Pay My Bill</span>
-          </a>
+          </a> */}
         </nav>
       </aside>
 
@@ -78,12 +78,12 @@ export default function DashboardPage() {
               </svg>
               Edit Profile
             </button>
-            <button className={styles.actionButton}>
+            {/* <button className={styles.actionButton}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
               Support
-            </button>
+            </button> */}
           </div>
         </div>
 

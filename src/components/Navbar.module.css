@@ -29,7 +29,7 @@
 
 /* Dark mode specific background */
 [data-theme="dark"] .secondaryNavbar {
-  background: #6d6b6b !important;
+  background: #4d4c4c !important;
 }
 
 .container {
@@ -114,6 +114,39 @@
 }
 
 .secondaryNavLink:hover::after {
+  width: 100%;
+}
+
+.payBillLink {
+  background-color: #dc2626;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.payBillLink:hover {
+  color: white;
+  background-color: #b91c1c;
+  transform: translateY(-1px);
+}
+
+.payBillLink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #dc2626;
+  transition: width 0.2s ease;
+}
+
+.payBillLink:hover::after {
   width: 100%;
 }
 

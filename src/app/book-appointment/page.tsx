@@ -16,6 +16,15 @@ export default function BookAppointmentPage() {
         </div>
 
         <div className={styles.formContainer}>
+          <div className={styles.heroImage}>
+            <img
+              src="/technician-2.svg"
+              alt="Customer Service"
+              width={200}
+              height={150}
+              className={styles.image}
+            />
+          </div>
           <form className={styles.appointmentForm}>
             <div className={styles.formSection}>
               <h2 className={styles.sectionTitle}>Customer Information</h2>

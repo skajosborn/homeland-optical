@@ -30,6 +30,13 @@
   transition: background-color 0.3s ease;
 }
 
+.heroImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
 .heroContent {
   max-width: 800px;
   margin: 0 auto;

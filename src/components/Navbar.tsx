@@ -107,6 +107,9 @@ const Navbar: React.FC = () => {
             <Link href="/book-appointment" className={styles.secondaryNavLink}>
               Book Appointment
             </Link>
+            <Link href="/pay-bill" className={styles.payBillLink}>
+              Pay My Bill
+            </Link>
           </div>
         </div>
       </nav>

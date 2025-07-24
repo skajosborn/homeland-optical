@@ -68,6 +68,27 @@ export default function Home() {
           </div>
         </div>
 
+        <div className={styles.hero}>
+          <div className={styles.heroContent}>
+            <h2 className={styles.title}>
+              Why Choose <span className={styles.highlight}>Homeland Optical Technology</span>
+            </h2>
+            <p className={styles.description}>
+              Experience unmatched reliability, lightning-fast speeds, and exceptional customer service that keeps you connected 24/7.
+            </p>
+          </div>
+          <div className={styles.heroImage}>
+            <Image
+              src="/newhero.svg"
+              alt="Homeland Cable Benefits"
+              width={600}
+              height={400}
+              priority
+              className={styles.image}
+            />
+          </div>
+        </div>
+
         <div className={styles.cta}>
           <a href="/bundles" className={styles.primaryButton}>
             View Plans
