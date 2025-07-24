@@ -38,7 +38,10 @@ const Navbar: React.FC = () => {
           <Link href="/support" className={styles.navLink}>
             Support
           </Link>
-          <Link href="/support" className={styles.navLink}>
+          <Link href="/login" className={styles.navLink}>
+            Login
+          </Link>
+          <Link href="/signup" className={styles.navLink}>
             Sign Up
           </Link>
           <ThemeToggle variant="navbar" />
@@ -69,7 +72,10 @@ const Navbar: React.FC = () => {
           <Link href="/support" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>
             Support
           </Link>
-          <Link href="/support" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>
+          <Link href="/login" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>
+            Login
+          </Link>
+          <Link href="/signup" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>
             Sign Up
           </Link>
           <div className={styles.mobileThemeToggle}>
