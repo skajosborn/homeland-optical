@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import styles from './Navbar.module.css';
 import ThemeToggle from './ThemeToggle';
+import styles from './Navbar.module.css';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,67 +33,51 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.container}>
-        <Link href="/" className={styles.logo}>
-          <img
-            src={isDarkMode ? "/newlogocombo.svg" : "/hotnewdark.svg"}
-            alt="Homeland Cable Logo"
-            className={styles.logoImage}
-            style={{ height: "2em", marginRight: "0.5em", verticalAlign: "middle" }}
-          />
-        </Link>
+    <>
+      {/* Main Navbar */}
+      <nav className={styles.navbar}>
+        <div className={styles.container}>
+          <Link href="/" className={styles.logo}>
+            <img
+              src={isDarkMode ? "/newlogocombo.svg" : "/hotnewdark.svg"}
+              alt="Homeland Cable Logo"
+              className={styles.logoImage}
+              style={{ height: "2em", marginRight: "0.5em", verticalAlign: "middle" }}
+            />
+          </Link>
 
-        {/* Desktop Menu */}
-        <div className={styles.desktopMenu}>
-          <Link href="/internet" className={styles.navLink}>
-            Internet
-          </Link>
-          <Link href="/tv" className={styles.navLink}>
-            TV
-          </Link>
-          <Link href="/bundles" className={styles.navLink}>
-            Bundles
-          </Link>
-          <Link href="/support" className={styles.navLink}>
-            Support
-          </Link>
-          <Link href="/dashboard" className={styles.navLink}>
-            Dashboard
-          </Link>
-          <Link href="/login" className={styles.navLink}>
-            Login
-          </Link>
-          <Link href="/signup" className={styles.navLink}>
-            Sign Up
-          </Link>
-          <ThemeToggle variant="navbar" />
+          {/* Desktop Menu */}
+          <div className={styles.desktopMenu}>
+            <Link href="/dashboard" className={styles.navLink}>
+              Dashboard
+            </Link>
+            <Link href="/login" className={styles.navLink}>
+              Login
+            </Link>
+            <Link href="/signup" className={styles.navLink}>
+              Sign Up
+            </Link>
+            <ThemeToggle variant="navbar" />
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button className={styles.mobileMenuButton} onClick={toggleMenu}>
+            <span className={styles.hamburger}></span>
+            <span className={styles.hamburger}></span>
+            <span className={styles.hamburger}></span>
+          </button>
         </div>
-
-        {/* Mobile Menu Button */}
-        <button 
-          className={styles.mobileMenuButton}
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          <span className={styles.hamburger}></span>
-          <span className={styles.hamburger}></span>
-          <span className={styles.hamburger}></span>
-        </button>
 
         {/* Mobile Menu */}
         <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ''}`}>
-          <Link href="/internet" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>
-            Internet
-          </Link>
-          <Link href="/tv" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>
-            TV
-          </Link>
-          <Link href="/bundles" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>
-            Bundles
+          <Link href="/services" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>
+            Services
           </Link>
           <Link href="/support" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>
             Support
+          </Link>
+          <Link href="/book-appointment" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>
+            Book Appointment
           </Link>
           <Link href="/dashboard" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>
             Dashboard
@@ -108,8 +92,25 @@ const Navbar: React.FC = () => {
             <ThemeToggle variant="navbar" />
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+
+      {/* Secondary Navbar */}
+      <nav className={styles.secondaryNavbar}>
+        <div className={styles.container}>
+          <div className={styles.secondaryDesktopMenu}>
+            <Link href="/services" className={styles.secondaryNavLink}>
+              Services
+            </Link>
+            <Link href="/support" className={styles.secondaryNavLink}>
+              Support
+            </Link>
+            <Link href="/book-appointment" className={styles.secondaryNavLink}>
+              Book Appointment
+            </Link>
+          </div>
+        </div>
+      </nav>
+    </>
   );
 };
 

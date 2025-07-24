@@ -79,7 +79,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <p>&copy; 2024 Homeland Cable. All rights reserved.</p>
+        <p>&copy; 2017 Homeland Optical Technology. All rights reserved.</p>
       </footer>
     </div>
   );
