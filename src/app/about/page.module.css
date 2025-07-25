@@ -1,0 +1,448 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  width: 100%;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 110px;
+  margin-bottom: 4rem;
+  width: 100%;
+  background: var(--hero-bg);
+  padding: 4rem 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+  transition: color 0.3s ease;
+}
+
+.highlight {
+  color: #dc2626;
+}
+
+.description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 0;
+  font-weight: 300;
+  transition: color 0.3s ease;
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin-bottom: 4rem;
+}
+
+.section {
+  margin-bottom: 5rem;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: var(--foreground);
+  transition: color 0.3s ease;
+}
+
+.sectionHeader p {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.storyContent h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem 0;
+  color: var(--foreground);
+  transition: color 0.3s ease;
+}
+
+.storyContent p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0 0 1.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.storyImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  filter: var(--icon-filter);
+}
+
+.image:hover {
+  transform: scale(1.02);
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.valueCard {
+  background: var(--hero-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.valueCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.valueIcon {
+  width: 64px;
+  height: 64px;
+  background: rgb(94, 91, 91);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.valueCard h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: var(--foreground);
+  transition: color 0.3s ease;
+}
+
+.valueCard p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.statCard {
+  background: var(--hero-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.statNumber {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.statLabel {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.teamMember {
+  background: var(--hero-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.teamMember:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.memberAvatar {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+}
+
+.avatarPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.teamMember h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--foreground);
+  transition: color 0.3s ease;
+}
+
+.memberTitle {
+  font-size: 1rem;
+  color: var(--primary);
+  margin: 0 0 1rem 0;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.memberBio {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.ctaSection {
+  background: var(--hero-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.ctaSection h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: var(--foreground);
+  transition: color 0.3s ease;
+}
+
+.ctaSection p {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  margin: 0 0 2rem 0;
+  transition: color 0.3s ease;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.primaryButton {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--primary) 0%, #b91c1c 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
+}
+
+.primaryButton:hover {
+  background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+}
+
+.secondaryButton {
+  padding: 1rem 2rem;
+  background: var(--background);
+  color: var(--foreground);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background: var(--border);
+  border-color: var(--text-muted);
+}
+
+.footer {
+  background: var(--footer-bg);
+  border-top: 1px solid var(--footer-border);
+  padding: 2rem;
+  text-align: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer p {
+  color: var(--text-muted);
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    margin-top: 105px;
+    padding: 3rem 2rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .storyGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .valuesGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .teamGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 100px;
+    padding: 2rem 1rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1.125rem;
+  }
+
+  .content {
+    padding: 0 1rem;
+  }
+
+  .sectionHeader h2 {
+    font-size: 2rem;
+  }
+
+  .ctaSection h2 {
+    font-size: 2rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 1.5rem 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.75rem;
+  }
+
+  .ctaSection h2 {
+    font-size: 1.75rem;
+  }
+
+  .valueCard,
+  .statCard,
+  .teamMember {
+    padding: 1.5rem;
+  }
+
+  .ctaSection {
+    padding: 2rem 1rem;
+  }
+} 

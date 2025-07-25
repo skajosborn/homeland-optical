@@ -2,11 +2,26 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./page.module.css";
 
 export default function SupportPage() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const checkTheme = () => {
+      const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+      setIsDarkMode(isDark);
+    };
+    checkTheme();
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+    return () => observer.disconnect();
+  }, []);
 
   const toggleFaq = (index: number) => {
     setActiveFaq(activeFaq === index ? null : index);
@@ -24,19 +39,9 @@ export default function SupportPage() {
               Find answers to common questions and get help with your Homeland Optical services.
             </p>
             <div className={styles.heroImages}>
-              {/* <div className={styles.heroImage}>
-                <Image
-                  src="/call-center-agent.svg"
-                  alt="Technical Support"
-                  width={200}
-                  height={150}
-                  priority
-                  className={styles.image}
-                />
-              </div> */}
               <div className={styles.heroImage}>
                 <Image
-                  src="/technician.svg"
+                  src={isDarkMode ? "/servicewhite.svg" : "/service.svg"}
                   alt="Customer Service"
                   width={200}
                   height={150}

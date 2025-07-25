@@ -1,6 +1,24 @@
+"use client";
 import styles from "./page.module.css";
+import { useEffect, useState } from "react";
 
 export default function BookAppointmentPage() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const checkTheme = () => {
+      const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+      setIsDarkMode(isDark);
+    };
+    checkTheme();
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -13,18 +31,19 @@ export default function BookAppointmentPage() {
               Schedule installation, repair, or maintenance services with our expert technicians.
             </p>
           </div>
-        </div>
-
-        <div className={styles.formContainer}>
           <div className={styles.heroImage}>
             <img
-              src="/technician-2.svg"
+              src={isDarkMode ? "/schedulewhite.svg" : "/schedule.svg"}
               alt="Customer Service"
               width={200}
               height={150}
               className={styles.image}
             />
           </div>
+        </div>
+
+        <div className={styles.formContainer}>
+        
           <form className={styles.appointmentForm}>
             <div className={styles.formSection}>
               <h2 className={styles.sectionTitle}>Customer Information</h2>

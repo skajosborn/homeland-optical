@@ -31,6 +31,7 @@
   font-size: 3rem;
   font-weight: 300;
   margin: 0 0 1rem 0;
+  padding-top: 2rem;
   color: var(--foreground);
   transition: color 0.3s ease;
 }

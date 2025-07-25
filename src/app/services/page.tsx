@@ -1,8 +1,27 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
+import { useEffect, useState } from "react";
 
 export default function ServicesPage() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const checkTheme = () => {
+      const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+      setIsDarkMode(isDark);
+    };
+    checkTheme();
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -14,6 +33,16 @@ export default function ServicesPage() {
             <p className={styles.description}>
               Discover our comprehensive range of internet, TV, and bundle services designed for your home.
             </p>
+          </div>
+          <div className={styles.heroImage}>
+            <Image
+              src={isDarkMode ? "/communications.svg" : "/communicationblack.svg"}
+              alt="Customer Service"
+              width={200}
+              height={150}
+              priority
+              className={styles.image}
+            />
           </div>
         </div>
 

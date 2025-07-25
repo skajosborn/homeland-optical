@@ -8,7 +8,7 @@ export default function LoginPage() {
         <div className={styles.hero}>
           <div className={styles.heroContent}>
             <h1 className={styles.title}>
-              Welcome Back to <span className={styles.highlight}>Homeland Optical</span>
+              Welcome Back to <span className={styles.highlight}>Homeland Optical Technology</span>
             </h1>
             <p className={styles.description}>
               Sign in to manage your account, view bills, and access support.

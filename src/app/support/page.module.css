@@ -49,6 +49,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 1rem;
 }
 
 .image {
@@ -69,6 +70,7 @@
   margin: 0 0 1.5rem 0;
   line-height: 1.1;
   letter-spacing: -0.02em;
+  padding-top:4rem;
   color: var(--foreground);
   transition: color 0.3s ease;
 }
@@ -642,4 +644,18 @@
     width: 100%;
     text-align: center;
   }
+} 
+
+:root .iconImage {
+  filter: invert(0) brightness(0) saturate(1);
+}
+[data-theme="dark"] .iconImage {
+  filter: invert(1) brightness(2);
+} 
+
+:root .communicationsIcon {
+  filter: invert(0) brightness(0) saturate(1);
+}
+[data-theme="dark"] .communicationsIcon {
+  filter: invert(1) brightness(2);
 } 

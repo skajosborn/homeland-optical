@@ -34,7 +34,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 0.5rem;
 }
 
 .heroContent {
@@ -47,7 +48,7 @@
   font-size: 3.5rem;
   font-weight: 300;
   margin: 0 0 1.5rem 0;
-  padding-top: 1rem;
+  padding-top: 4rem;
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--foreground);
@@ -385,4 +386,18 @@
     width: 100%;
     padding: 1rem 2rem;
   }
+} 
+
+:root .iconImage {
+  filter: invert(0) brightness(0) saturate(1);
+}
+[data-theme="dark"] .iconImage {
+  filter: invert(1) brightness(2);
+} 
+
+:root .communicationsIcon {
+  filter: invert(0) brightness(0) saturate(1);
+}
+[data-theme="dark"] .communicationsIcon {
+  filter: invert(1) brightness(2);
 } 
