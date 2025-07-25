@@ -62,7 +62,7 @@ export default function AboutPage() {
                   <Image src="/television.svg" alt="Community" width={48} height={48} className={styles.image} />
                 </div>
                 <h3>Community</h3>
-                <p>We're not just a service provider—we're part of the community. We give back through local initiatives and support programs.</p>
+                <p>We&apos;re not just a service provider&mdash;we&apos;re part of the community. We give back through local initiatives and support programs.</p>
               </div>
               <div className={styles.valueCard}>
                 <div className={styles.valueIcon}>
