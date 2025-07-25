@@ -123,7 +123,7 @@ export default function SupportPage() {
                    </svg>
                  </div>
                  <h3>Dedicated Professionals</h3>
-                 <p>Our technicians are dedicated internet professionals and are trained in our technology. They're here to help.</p>
+                 <p>Our technicians are dedicated internet professionals and are trained in our technology. They&apos;re here to help.</p>
                </div>
                
                <div className={styles.featureBlock}>
@@ -236,7 +236,7 @@ export default function SupportPage() {
                     </svg>
                   </button>
                   <div className={styles.faqAnswer}>
-                    <p>You can pay your bill online through your customer dashboard. Simply log in to your account, navigate to the "Pay My Bill" section, and follow the payment instructions. We accept all major credit cards and bank transfers.</p>
+                    <p>You can pay your bill online through your customer dashboard. Simply log in to your account, navigate to the &quot;Pay My Bill&quot; section, and follow the payment instructions. We accept all major credit cards and bank transfers.</p>
                   </div>
                 </div>
                 
@@ -248,7 +248,7 @@ export default function SupportPage() {
                     </svg>
                   </button>
                   <div className={styles.faqAnswer}>
-                    <p>To update your billing address, log into your customer dashboard and go to "Account Settings." You can also call our customer service team at 1-800-HOMELAND to make this change over the phone.</p>
+                    <p>To update your billing address, log into your customer dashboard and go to &quot;Account Settings.&quot; You can also call our customer service team at 1-800-HOMELAND to make this change over the phone.</p>
                   </div>
                 </div>
                 
@@ -289,7 +289,7 @@ export default function SupportPage() {
                     </svg>
                   </button>
                   <div className={styles.faqAnswer}>
-                    <p>To change your WiFi password, access your router's admin panel (usually at 192.168.1.1 or 192.168.0.1). The default login credentials are typically found on a sticker on your router. If you need help, our technical support team can guide you through the process.</p>
+                    <p>To change your WiFi password, access your router&apos;s admin panel (usually at 192.168.1.1 or 192.168.0.1). The default login credentials are typically found on a sticker on your router. If you need help, our technical support team can guide you through the process.</p>
                   </div>
                 </div>
                 
@@ -318,7 +318,7 @@ export default function SupportPage() {
                     </svg>
                   </button>
                   <div className={styles.faqAnswer}>
-                    <p>Try resetting your cable box by unplugging it for 30 seconds and plugging it back in. If channels are still missing, check your channel guide to ensure you're on the correct input. If the problem continues, contact our support team.</p>
+                    <p>Try resetting your cable box by unplugging it for 30 seconds and plugging it back in. If channels are still missing, check your channel guide to ensure you&apos;re on the correct input. If the problem continues, contact our support team.</p>
                   </div>
                 </div>
                 
@@ -330,7 +330,7 @@ export default function SupportPage() {
                     </svg>
                   </button>
                   <div className={styles.faqAnswer}>
-                    <p>To program your remote, press and hold the "Setup" button until the LED blinks twice. Enter the 3-digit code for your TV brand, then press "Power" to test. If it doesn't work, try the next code for your brand. You can find the codes in your remote's manual or on our website.</p>
+                    <p>To program your remote, press and hold the &quot;Setup&quot; button until the LED blinks twice. Enter the 3-digit code for your TV brand, then press &quot;Power&quot; to test. If it doesn&apos;t work, try the next code for your brand. You can find the codes in your remote&apos;s manual or on our website.</p>
                   </div>
                 </div>
               </div>
@@ -343,7 +343,7 @@ export default function SupportPage() {
           <div className={styles.contactSection}>
             <h2 className={styles.sectionTitle}>Still Need Help?</h2>
             <p className={styles.contactDescription}>
-              If you couldn't find the answer you're looking for, our support team is here to help.
+              If you couldn&apos;t find the answer you&apos;re looking for, our support team is here to help.
             </p>
             <div className={styles.contactOptions}>
               <div className={styles.contactOption}>

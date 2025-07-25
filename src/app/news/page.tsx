@@ -30,7 +30,7 @@ export default function NewsPage() {
                   <span className={styles.date}>December 15, 2024</span>
                 </div>
                 <h2>Major Network Upgrade Completed</h2>
-                <p>We're excited to announce the completion of our major network infrastructure upgrade, bringing even faster speeds and improved reliability to all our customers. This upgrade includes new fiber optic connections and enhanced routing technology.</p>
+                <p>We&apos;re excited to announce the completion of our major network infrastructure upgrade, bringing even faster speeds and improved reliability to all our customers. This upgrade includes new fiber optic connections and enhanced routing technology.</p>
                 <Link href="#" className={styles.readMore}>Read Full Article</Link>
               </div>
             </article>
@@ -61,7 +61,7 @@ export default function NewsPage() {
                   <span className={styles.date}>December 8, 2024</span>
                 </div>
                 <h3>New Premium Channels Added</h3>
-                <p>We've added 15 new premium channels to our TV lineup, including popular sports networks and entertainment channels. Check your package to see what's new!</p>
+                <p>We&apos;ve added 15 new premium channels to our TV lineup, including popular sports networks and entertainment channels. Check your package to see what&apos;s new!</p>
                 <Link href="#" className={styles.readMore}>Read More</Link>
               </div>
             </article>
@@ -76,7 +76,7 @@ export default function NewsPage() {
                   <span className={styles.date}>December 5, 2024</span>
                 </div>
                 <h3>24/7 Customer Support Now Available</h3>
-                <p>We're proud to announce that our customer support team is now available 24/7. Get help whenever you need it, day or night, through phone, chat, or email.</p>
+                <p>We&apos;re proud to announce that our customer support team is now available 24/7. Get help whenever you need it, day or night, through phone, chat, or email.</p>
                 <Link href="#" className={styles.readMore}>Read More</Link>
               </div>
             </article>
@@ -106,7 +106,7 @@ export default function NewsPage() {
                   <span className={styles.date}>November 28, 2024</span>
                 </div>
                 <h3>Community Internet Access Program</h3>
-                <p>We're launching a new program to provide free internet access to local schools and community centers. This initiative aims to bridge the digital divide in our community.</p>
+                <p>We&apos;re launching a new program to provide free internet access to local schools and community centers. This initiative aims to bridge the digital divide in our community.</p>
                 <Link href="#" className={styles.readMore}>Read More</Link>
               </div>
             </article>

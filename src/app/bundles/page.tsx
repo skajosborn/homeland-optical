@@ -354,7 +354,7 @@ export default function BundlesPage() {
 
           <div className={styles.ctaSection}>
             <h2>Ready to Start Saving?</h2>
-            <p>Choose the bundle that's right for your family and start enjoying the savings today.</p>
+            <p>Choose the bundle that&apos;s right for your family and start enjoying the savings today.</p>
             <div className={styles.ctaButtons}>
               <Link href="/signup" className={styles.ctaPrimaryButton}>
                 Get Started Today

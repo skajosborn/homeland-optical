@@ -201,7 +201,7 @@ export default function ServicesPage() {
 
           <div className={styles.ctaSection}>
             <h2>Ready to Get Started?</h2>
-            <p>Choose the service that's right for you and start enjoying lightning-fast internet, crystal-clear TV, and unbeatable savings.</p>
+            <p>Choose the service that&apos;s right for you and start enjoying lightning-fast internet, crystal-clear TV, and unbeatable savings.</p>
             <div className={styles.ctaButtons}>
               <Link href="/signup" className={styles.ctaPrimaryButton}>
                 Sign Up Now

@@ -115,7 +115,7 @@ export default function LoginPage() {
 
               <div className={styles.alternativeActions}>
                 <p className={styles.noAccount}>
-                  Don't have an account? <a href="/signup" className={styles.link}>Sign up here</a>
+                  Don&apos;t have an account? <a href="/signup" className={styles.link}>Sign up here</a>
                 </p>
                 <p className={styles.helpText}>
                   Need help? <a href="/support" className={styles.link}>Contact Support</a>
