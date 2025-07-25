@@ -30,6 +30,10 @@
   transition: background-color 0.3s ease;
 }
 
+.heroImage {
+  padding-top: 4rem;
+}
+
 .heroContent {
   max-width: 800px;
   margin: 0 auto;

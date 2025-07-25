@@ -1,11 +1,30 @@
+"use client";
 import Image from "next/image";
 import styles from "./page.module.css";
+import { useEffect, useState } from "react";
 
 export default function SignupPage() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const checkTheme = () => {
+      const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+      setIsDarkMode(isDark);
+    };
+    checkTheme();
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className={styles.container}>
       <main className={styles.main}>
         <div className={styles.hero}>
+          
           <div className={styles.heroContent}>
             <h1 className={styles.title}>
               Sign Up for <span className={styles.highlight}>Homeland Optical</span>
@@ -13,6 +32,16 @@ export default function SignupPage() {
             <p className={styles.description}>
               Get started with lightning-fast internet, crystal-clear TV, and unbeatable bundles.
             </p>
+          </div>
+          <div className={styles.heroImage}>
+            <Image
+              src={isDarkMode ? "/add-userwhite.svg" : "/add-userblack.svg"}
+              alt="Sign Up Icon"
+              width={120}
+              height={120}
+              priority
+              className={styles.image}
+            />
           </div>
         </div>
 

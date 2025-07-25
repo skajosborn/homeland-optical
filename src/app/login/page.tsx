@@ -1,7 +1,25 @@
+"use client";
 import Image from "next/image";
 import styles from "./page.module.css";
+import { useEffect, useState } from "react";
 
 export default function LoginPage() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const checkTheme = () => {
+      const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+      setIsDarkMode(isDark);
+    };
+    checkTheme();
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -13,6 +31,16 @@ export default function LoginPage() {
             <p className={styles.description}>
               Sign in to manage your account, view bills, and access support.
             </p>
+          </div>
+          <div className={styles.heroImage}>
+            <Image
+              src={isDarkMode ? "/enterwhite.svg" : "/enterblack.svg"}
+              alt="Login Icon"
+              width={120}
+              height={120}
+              priority
+              className={styles.image}
+            />
           </div>
         </div>
 
