@@ -36,7 +36,7 @@ export default function ServicesPage() {
           </div>
           <div className={styles.heroImage}>
             <Image
-              src={isDarkMode ? "/communications.svg" : "/communicationblack.svg"}
+              src={isDarkMode ? "/communication.svg" : "/communicationblack.svg"}
               alt="Customer Service"
               width={200}
               height={150}
